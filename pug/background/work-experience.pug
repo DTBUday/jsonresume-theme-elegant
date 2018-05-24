@@ -18,9 +18,9 @@ unless _.isEmpty(resume.work)
                     title="Currently Working",
                     data-placement="left"
                   )
-                strong= experience.position
+                strong= experience.position + ", "
                 if experience.url
-                  a(href=experience.url, target="_blank")= ", " + experience.name
+                  a(href=experience.url, target="_blank")= experience.name
                 else
                   |#{experience.name}
 
