@@ -63,9 +63,7 @@ function render(resume) {
 
     resume.basics.picture = utils.getUrlForPicture(resume);
 
-    addressValues = _(addressAttrs).map(function(key) {
-        return resume.basics.location[key];
-    });
+    addressValues = [resume.basics.location.city, resume.basics.location.countryCode];
 
     resume.basics.summary = convertMarkdown(resume.basics.summary);
 
