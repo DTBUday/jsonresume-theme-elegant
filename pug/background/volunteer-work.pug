@@ -21,14 +21,18 @@ unless _.isEmpty(resume.volunteer)
                     )
 
                   strong= volunteer_info.position + ', '
-                  if volunteer_info.website
-                    a(href=volunteer_info.website, target="_blank")= volunteer_info.organization
+                  if volunteer_info.url
+                    a(href=volunteer_info.url, target="_blank")= volunteer_info.organization
                   else
                     |#{volunteer_info.organization}
 
                 p.text-muted
-                  small
-                    |#{volunteer_info.startDate} - #{volunteer_info.endDate || 'Present'}
+                  if !volunteer_info.endDate
+                    small
+                      |#{volunteer_info.startDate}
+                  else
+                    small
+                      |#{volunteer_info.startDate} - #{volunteer_info.endDate}
 
                 .mop-wrapper!= volunteer_info.summary
 
