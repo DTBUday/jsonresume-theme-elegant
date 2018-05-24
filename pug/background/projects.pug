@@ -1,0 +1,35 @@
+unless _.isEmpty(resume.projects)
+  .detail#projects
+    .icon
+      i.fs-lg.icon-code
+      span.mobile-title Projects
+
+    .info
+      h4.title.text-uppercase Projects
+
+      .content
+        ul.list-unstyled.clear-margin
+          each project in resume.projects
+            li.card.card-nested
+              .content
+                p.clear-margin(itemprop="award")
+                  strong
+                    a(href=project.url)= project.name
+                  |#{", " + project.host}
+
+                p.text-muted
+                  small
+                    |#{project.startDate} - #{project.endDate} 
+		
+                .mop-wrapper!= project.description
+
+                unless _.isEmpty(project.highlights)
+                  ul
+                    each highlight in project.highlights
+                      li.mop-wrapper!= highlight
+
+                unless _.isEmpty(project.keywords)
+                  .space-top.labels
+                    span.label.label-project= project.type
+                    each keyword in project.keywords
+                      span.label.label-keyword= keyword

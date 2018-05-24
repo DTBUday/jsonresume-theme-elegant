@@ -247,6 +247,18 @@
 .label-keyword:last-child {
   margin-right: 0;
 }
+.label-project {
+  display: inline-block;
+  background: #5cb85c;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+  margin-right: 5px;
+}
+.label-project:last-child {
+  margin-right: 0;
+}
 .link-disguise {
   color: inherit;
 }
