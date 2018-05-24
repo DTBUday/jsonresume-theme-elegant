@@ -13,8 +13,8 @@ unless _.isEmpty(resume.awards)
             li.card.card-nested
               .content
                 p.clear-margin(itemprop="award")
-                  strong= award.title + " "
-                  |#{award.awarder}
+                  strong= award.title
+                  |#{", " + award.awarder}
 
                 p.text-muted
                   small
