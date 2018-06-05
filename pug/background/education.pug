@@ -21,7 +21,7 @@ unless _.isEmpty(resume.education)
                     )
 
                   strong
-                    |#{education_info.area}, #{education_info.studyType},&nbsp;
+                    |#{education_info.title}, 
                   |#{education_info.institution}
 
                 p.text-muted(class=!education_info.gpa && _.isEmpty(education_info.courses) ? 'clear-margin' : '')

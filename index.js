@@ -70,8 +70,8 @@ function render(resume) {
 
     resume.basics.computed_location = _.compact(addressValues).join(', ');
 
-    if (resume.languages) {
-        resume.basics.languages = _.pluck(resume.languages, 'language').join(', ');
+    if (resume.basics.languages) {
+        resume.basics.languages = _.pluck(resume.basics.languages, 'language').join(', ');
     }
 
     _(resume.basics.profiles).each(function(profile) {
