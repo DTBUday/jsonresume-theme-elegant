@@ -6,7 +6,7 @@
 //
 
 var fs = require('fs');
-var resume = require("resume-schema").resumeJson;
+var resume = require("./resume.json");
 var theme = require("./index.js");
 
 fs.writeFile("./build/index.html", render(), function(err) {
